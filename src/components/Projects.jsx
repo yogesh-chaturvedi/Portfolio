@@ -29,8 +29,8 @@ const Projects = () => {
                     </div>
 
                     <div className='px-2'>
-                        <div className='text-2xl font-bold'>Gemini AI clone</div>
-                        <div className='text-sm'>Created a Gemini UI clone featuring real-time chat, clean design, and state management with Context API.</div>
+                        <div className='text-2xl font-bold'>AI Chatbot</div>
+                        <div className='text-sm'>Created an AI chatbot using Gemini API, featuring real-time chat, clean design, and state management with Context API.</div>
                     </div>
                     <div onClick={() => { handleClick('https://gemini-clone-omega-ruddy.vercel.app/') }}><i className="fa-brands fa-github text-3xl cursor-pointer pb-3"></i></div>
                 </div>
