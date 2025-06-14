@@ -50,8 +50,8 @@ function Navbar() {
 
                 <div className='flex items-center'>
                     <span onClick={() => handleTheme()} className='text-xl cursor-pointer px-3 rounded-2xl bg-gray-800 hover:bg-gray-950 dark:bg-blue-700 mr-2 '>{theme === 'light' ? '☀️' : '🌙'}</span>
-                    <button className='contactMe md:block mr-5 dark:bg-gradient-to-b from-blue-400 to-indigo-600  hover:from-blue-500 dark:hover:to-indigo-700 bg-gray-800 hover:bg-gray-900 text-white transition-all duration-300 shadow-md px-4 py-2 rounded-lg cursor-pointer'><AnchorLink offset={50} href='#contact' >Contact Me</AnchorLink></button>
-                    <span className='md:hidden'><i onClick={() => setToggle(!toggle)} className="fa-solid fa-bars cursor-pointer"></i></span>
+                    <button className='contactMe hidden md:block mr-5 dark:bg-gradient-to-b from-blue-400 to-indigo-600  hover:from-blue-500 dark:hover:to-indigo-700 bg-gray-800 hover:bg-gray-900 text-white transition-all duration-300 shadow-md px-4 py-2 rounded-lg cursor-pointer'><AnchorLink offset={50} href='#contact' >Contact Me</AnchorLink></button>
+                    <span className='md:hidden'><i onClick={() => setToggle(!toggle)} className="fa-solid fa-bars ml-1 text-2xl cursor-pointer"></i></span>
                 </div>
             </nav>
 
