@@ -17,7 +17,7 @@ const Projects = () => {
                 <p className='subTitle w-full sm:w-[90%] md:w-[80%] lg:w-[70%] text:xs md:text-lg font-semibold'>Here are some of my recent projects, Each project was carefully crafted, with attention to detaile, performance and user experience</p>
             </div>
 
-            <div className="projects flex flex-col gap-5 md:flex-row md:gap-20">
+            <div className="projects flex flex-col gap-5 flex-wrap justify-center md:flex-row md:gap-20">
                 {/* first */}
                 <div className='ProjectCard flex flex-col gap-6 bg-gray-200 dark:bg-black dark:text-white text-slate-900 rounded-2xl border-2 border-black dark:border-white h-[400px] w-[300px]'>
                     <img className='border-b-2 border-gray-600 dark:border-white rounded-t-2xl h-[50%] w-full' src={screenshots.geminiSS} alt="gemini-img" />

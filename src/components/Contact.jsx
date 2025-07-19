@@ -93,7 +93,7 @@ const Contact = () => {
     };
 
     return (
-        <div id='contact' className=' mx-auto w-full lg:w-[80vw] text-center flex flex-col justify-center gap-y-10 px-10 '>
+        <div id='contact' className=' mx-auto w-full lg:w-[80vw] text-center flex flex-col justify-center gap-y-10 p-5 '>
             <ToastContainer
                 position="top-center"
                 autoClose={5000}
