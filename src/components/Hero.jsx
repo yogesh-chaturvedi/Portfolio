@@ -12,7 +12,7 @@ function Hero() {
                 <button className='contactMe dark:bg-gradient-to-b from-blue-400 to-indigo-600  hover:from-blue-500 dark:hover:to-indigo-700 bg-gray-800 hover:bg-gray-950 text-white transition-all duration-300 shadow-md px-4 py-2 rounded-lg cursor-pointer'><AnchorLink offset={50} href='#contact' >Connect With Me</AnchorLink></button>
 
                 {/* cv */}
-                <button className='contactMe dark:bg-gradient-to-b from-blue-400 to-indigo-600  hover:from-blue-500 dark:hover:to-indigo-700 bg-gray-800 hover:bg-gray-950 text-white transition-all duration-300 shadow-md px-4 py-2 rounded-lg cursor-pointer'><a href="/resume.pdf" download='Yogesh-Chaturvedi-CV.pdf'>Downlode CV</a></button>
+                <button className='contactMe dark:bg-gradient-to-b from-blue-400 to-indigo-600  hover:from-blue-500 dark:hover:to-indigo-700 bg-gray-800 hover:bg-gray-950 text-white transition-all duration-300 shadow-md px-4 py-2 rounded-lg cursor-pointer'><a href="/yogesh_resume.pdf" download='Yogesh-Chaturvedi-CV.pdf'>Downlode CV</a></button>
 
                 {/* projects */}
                 <button className='contactMe dark:bg-gradient-to-b from-blue-400 to-indigo-600  hover:from-blue-500 dark:hover:to-indigo-700  bg-gray-800 hover:bg-gray-950 text-white  transition-all duration-300 shadow-md px-4 py-2 rounded-lg cursor-pointer'><AnchorLink offset={50} href='#projects'>View Projects</AnchorLink></button>
