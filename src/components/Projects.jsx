@@ -7,6 +7,16 @@ const Projects = () => {
         window.open(`${link}`, "_blank")
     }
 
+    const data = [
+
+        { id: 1, image: screenshots.shopNest, teckStack: ['MERN', 'Stripe', 'Gemini API'], title: 'AI-Powered E-Commerce', description: 'ShopNest is a responsive e-commerce site with auth, filters, pagination, Stripe, admin panel, and Gemini AI chatbot.', githubLink: 'https://github.com/yogesh-chaturvedi/ShopNest', projectLink: 'https://shop-nest-livid.vercel.app/' },
+
+        { id: 2, image: screenshots.passwordManagerSS, teckStack: ['React', 'Node.js', 'MongoDb'], title: 'Password Manager', description: 'Developed LockVault – a MERN stack password manager with Encryption, Authentication, CRUD, and responsive UI.', githubLink: 'https://github.com/yogesh-chaturvedi/Password-Manager', projectLink: 'https://password-manager-ten-xi.vercel.app/' },
+
+        { id: 3, image: screenshots.geminiSS, teckStack: ['React', 'Tailwind', 'Gemini API'], title: 'AI Chatbot', description: 'Created an AI chatbot using Gemini API, featuring real-time chat, clean design, and state management with Context API.', githubLink: 'https://github.com/yogesh-chaturvedi/Gemini-Clone', projectLink: 'https://gemini-clone-omega-ruddy.vercel.app/' }
+
+    ]
+
 
     return (
         <div id='projects' className='mx-auto w-full lg:w-[80vw] text-center flex flex-col items-center justify-evenly gap-10 p-5'>
@@ -18,56 +28,35 @@ const Projects = () => {
             </div>
 
             <div className="projects flex flex-col gap-5 flex-wrap justify-center md:flex-row md:gap-20">
-                {/* first */}
-                <div className='ProjectCard flex flex-col gap-6 bg-gray-200 dark:bg-black dark:text-white text-slate-900 rounded-2xl border-2 border-black  dark:border-white h-[400px] w-[300px]'>
-                    <img className='border-b-2 border-gray-600 dark:border-white rounded-t-2xl h-[50%] w-full' src={screenshots.shopNest} alt="gemini-img" />
 
-                    <div className='flex justify-evenly px-2'>
-                        <span className='border-2 bg-gray-800 text-slate-100 text-xs rounded-xl px-3 py-1.5 '>MERN</span>
-                        <span className='border-2 bg-gray-800 text-slate-100 text-xs rounded-xl px-3 py-1.5 '>Stripe</span>
-                        <span className='border-2 bg-gray-800 text-slate-100 text-xs rounded-xl px-3 py-1.5 '>Gemini API</span>
-                    </div>
+                {data.map((items, index) => {
+                    return (<div key={index} className='ProjectCard hover:translate-y-1 transition duration-200 z-20 flex flex-col gap-6 bg-gray-200 dark:bg-black dark:text-white text-slate-900 rounded-2xl border-2 border-black  dark:border-white h-[400px] w-[300px]'>
+                        <img className='border-b-2 border-gray-600 dark:border-white rounded-t-2xl h-[50%] w-full' src={items.image} alt="project-img" />
 
-                    <div className='px-2'>
-                        <div className='text-xl font-bold mb-1'>AI-Powered E-Commerce</div>
-                        <div className='text-sm'>ShopNest is a responsive e-commerce site with auth, filters, pagination, Stripe, admin panel, and Gemini AI chatbot.</div>
-                    </div>
-                    <div onClick={() => { handleClick('https://shop-nest-livid.vercel.app/') }}><i className="fa-brands fa-github text-3xl cursor-pointer pb-3"></i></div>
-                </div>
+                        {/* tachStack */}
+                        <div className='flex justify-evenly px-2'>
+                            {items.teckStack.map((stack, index) => {
+                                return (
+                                    <span key={index} className='border-2 bg-gray-800 text-slate-100 text-xs rounded-xl px-3 py-1.5 '>{stack}</span>
+                                )
+                            })}
+                        </div>
 
-                {/* second */}
-                <div className='ProjectCard flex flex-col bg-gray-200 dark:bg-black dark:text-white text-slate-900 gap-6 rounded-2xl border-2 dark:border-white border-black h-[400px] w-[300px]'>
-                    <img className='border-b-2 border-gray-600 dark:border-white rounded-t-2xl h-[50%] w-full' src={screenshots.passwordManagerSS} alt="passwordManager-img" />
+                        <div className='px-2'>
+                            <div className='text-xl font-bold mb-1'>{items.title}</div>
+                            <div className='text-sm'>{items.description}</div>
+                        </div>
 
-                    <div className='flex justify-evenly px-2'>
-                        <span className='border-2 text-slate-100  bg-gray-800 text-xs rounded-xl px-3 py-1.5 '>React</span>
-                        <span className='border-2 text-slate-100 bg-gray-800 text-xs rounded-xl px-3 py-1.5 '>Node.js</span>
-                        <span className='border-2 text-slate-100  bg-gray-800 text-xs rounded-xl px-3 py-1.5 '>MongoDb</span>
-                    </div>
+                        <div className='flex items-center justify-center gap-3'>
 
-                    <div className='px-2'>
-                        <div className='text-xl font-bold mb-1'>Password Manager</div>
-                        <div className='text-sm'>Developed LockVault – a MERN stack password manager with Encryption, Authentication, CRUD, and responsive UI.</div>
-                    </div>
-                    <div onClick={() => { handleClick('https://password-manager-ten-xi.vercel.app/') }}><i className="fa-brands fa-github text-3xl cursor-pointer pb-3"></i></div>
-                </div>
+                            <div onClick={() => { handleClick(items.projectLink) }}><i className="fa-solid fa-link text-2xl cursor-pointer pb-3"></i></div>
 
-                {/* third */}
-                <div className='ProjectCard flex flex-col gap-6 bg-gray-200 dark:bg-black dark:text-white text-slate-900 rounded-2xl border-2 border-black dark:border-white h-[400px] w-[300px]'>
-                    <img className='border-b-2 border-gray-600 dark:border-white rounded-t-2xl h-[50%] w-full' src={screenshots.geminiSS} alt="gemini-img" />
+                            <div onClick={() => { handleClick(items.githubLink) }}><i className="fa-brands fa-github text-2xl cursor-pointer pb-3"></i></div>
 
-                    <div className='flex justify-evenly px-2'>
-                        <span className='border-2 bg-gray-800 text-slate-100 text-xs rounded-xl px-3 py-1.5 '>React</span>
-                        <span className='border-2 bg-gray-800 text-slate-100 text-xs rounded-xl px-3 py-1.5 '>Tailwind</span>
-                        <span className='border-2 bg-gray-800 text-slate-100 text-xs rounded-xl px-3 py-1.5 '>Gemini Api</span>
-                    </div>
+                        </div>
 
-                    <div className='px-2'>
-                        <div className='text-xl font-bold mb-1'>AI Chatbot</div>
-                        <div className='text-sm'>Created an AI chatbot using Gemini API, featuring real-time chat, clean design, and state management with Context API.</div>
-                    </div>
-                    <div onClick={() => { handleClick('https://gemini-clone-omega-ruddy.vercel.app/') }}><i className="fa-brands fa-github text-3xl cursor-pointer pb-3"></i></div>
-                </div>
+                    </div>)
+                })}
 
             </div>
 

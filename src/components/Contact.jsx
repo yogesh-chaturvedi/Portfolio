@@ -3,11 +3,22 @@ import { ToastContainer, toast } from 'react-toastify';
 
 const Contact = () => {
 
+
+    const phoneNumber = import.meta.env.VITE_CONTACT_NUMBER
+
+    const contactData = [
+
+        { id: 1, title: 'Email', info: 'yogeshchaturvedi2425@gmail.com' },
+        { id: 2, title: 'Phone', info: phoneNumber },
+        { id: 3, title: 'Location', info: 'Paschim Vihar, New Delhi, India' }
+
+    ]
+
     const [loader, setLoader] = useState(false)
 
     function handleCopy(text) {
         if (navigator.clipboard.writeText(text)) {
-            toast("text copied successfully", {
+            toast("Text Copied Successfully", {
                 position: "top-center",
                 autoClose: 1500,
                 hideProgressBar: false,
@@ -116,42 +127,20 @@ const Contact = () => {
                     <h3 className='font-bold text-2xl'>Contact Information</h3>
 
                     <div className='contactInfo px-3 py-6 flex flex-col items-center gap-7 '>
-                        {/* first */}
-                        <div className='border-1 w-full rounded-2xl p-1 hover:bg-gray-300 bg-gray-200 dark:bg-black flex gap-1 md:gap-3 items-center'>
-                            <span><i className="fa-solid fa-envelope text-2xl px-3 py-2 rounded-full bg-gray-300 dark:bg-gray-800"></i></span>
+                        {contactData.map((items, index) => {
+                            return (<div key={index} className='border-1 w-full rounded-2xl p-1 hover:bg-gray-300 bg-gray-200 dark:bg-black flex gap-1 md:gap-3 items-center'>
+                                <span><i className="fa-solid fa-envelope text-2xl px-3 py-2 rounded-full bg-gray-300 dark:bg-gray-800"></i></span>
 
-                            <div className='flex flex-col items-start w-full break-words'>
-                                <p className='text-left text-sm md:text-base font-bold'>Email</p>
-                                <p className='break-all text-left text-sm md:text-base'>yogeshchaturvedi2425@gmail.com <i onClick={() => { handleCopy("yogeshchaturvedi2425@gmail.com") }} className="fa-solid fa-copy cursor-pointer text-xl ml-2"></i></p>
-                            </div>
+                                <div className='flex flex-col items-start w-full break-words'>
+                                    <p className='text-left text-sm md:text-base font-bold'>{items.title}</p>
+                                    <p className='break-all text-left text-sm md:text-base'>{items.info}<i onClick={() => { handleCopy(items.info) }} className="fa-solid fa-copy cursor-pointer text-xl ml-2"></i></p>
+                                </div>
 
-                        </div>
-
-                        {/* second */}
-                        <div className='border-1 w-full rounded-2xl p-1 hover:bg-gray-300 bg-gray-200 dark:bg-black flex gap-1 md:gap-3 items-center'>
-                            <span><i className="fa-solid fa-phone text-2xl px-3 py-2 rounded-3xl bg-gray-300 dark:bg-gray-800"></i></span>
-
-                            <div className='flex flex-col items-start w-full break-words'>
-                                <p className='text-left text-sm md:text-base font-bold'>Phone</p>
-                                <p className='break-all text-left text-sm md:text-base'>(+91 9953660916)<i onClick={() => { handleCopy("9953660916") }} className="fa-solid fa-copy cursor-pointer text-xl ml-2"></i></p>
-                            </div>
-
-                        </div>
-
-                        {/* third */}
-                        <div className='border-1 w-full rounded-2xl p-1 hover:bg-gray-300 bg-gray-200 dark:bg-black flex gap-1 md:gap-3 items-center'>
-
-                            <span><i className="fa-solid fa-location-dot text-2xl px-4 py-2 rounded-3xl bg-gray-300 dark:bg-gray-800"></i></span>
-
-                            <div className='flex flex-col items-start w-full break-words'>
-                                <p className='text-left text-sm md:text-base font-bold'>Location</p>
-                                <p className='break-all text-left text-sm md:text-base'>Paschim Vihar, New Delhi, India <i onClick={() => { handleCopy("Paschim Vihar, New Delhi, India") }} className="fa-solid fa-copy cursor-pointer text-xl ml-2"></i></p>
-                            </div>
-
-                        </div>
+                            </div>)
+                        })}
                     </div>
 
-                    <div className=''>
+                    <div >
                         <p>Connect With Me</p>
                         <div className='icons'>
                             <span><i onClick={() => handleProfile("https://www.instagram.com/yogeshchaturvedi_25?igsh=c2ViYXQ4bHNiOXZq")} className="fa-brands fa-instagram cursor-pointer text-xl px-2 py-1 rounded-full hover:bg-gray-400 dark:hover:bg-gray-800"></i></span>
