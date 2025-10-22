@@ -13,7 +13,7 @@ const Projects = () => {
 
         { id: 2, image: screenshots.passwordManagerSS, teckStack: ['React', 'Node.js', 'MongoDb'], title: 'Password Manager', description: 'Developed LockVault – a MERN stack password manager with Encryption, Authentication, CRUD, and responsive UI.', githubLink: 'https://github.com/yogesh-chaturvedi/Password-Manager', projectLink: 'https://password-manager-ten-xi.vercel.app/' },
 
-        { id: 3, image: screenshots.geminiSS, teckStack: ['React', 'Tailwind', 'Gemini API'], title: 'AI Chatbot', description: 'Created an AI chatbot using Gemini API, featuring real-time chat, clean design, and state management with Context API.', githubLink: 'https://github.com/yogesh-chaturvedi/Gemini-Clone', projectLink: 'https://gemini-clone-omega-ruddy.vercel.app/' }
+        { id: 3, image: screenshots.learnifyAiSS, teckStack: ['MERN', 'Multer', 'Gemini API'], title: 'Full Stack AI-Powered LMS', description: 'Built a secure, role-based LMS with secure authentication and dashboards for Admin, Instructor, and User', githubLink: 'https://github.com/yogesh-chaturvedi/LMS', projectLink: 'learnifyai-phi-azure.vercel.app/' }
 
     ]
 
