@@ -57,7 +57,7 @@ function Navbar() {
 
 
             {/* mobile */}
-            <div className={`h-[100vh] w-[170px] z-10 fixed top-0 right-0 bg-slate-200 text-slate-800 dark:text-slate-100 dark:bg-gray-900 ${toggle ? 'translate-x-0' : 'translate-x-full'} `}>
+            <div className={`h-[100vh] w-[170px] z-50 fixed top-0 right-0 bg-slate-200 text-slate-800 dark:text-slate-100 dark:bg-gray-900 ${toggle ? 'translate-x-0' : 'translate-x-full'} `}>
                 <div className='flex justify-between mx-3 my-4 items-center'>
                     <div className='font-bold text-2xl'>Menu</div>
                     <div><i onClick={() => setToggle(false)} className="fa-solid fa-xmark text-2xl cursor-pointer"></i></div>
