@@ -3,7 +3,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 function Navbar() {
 
-    const topics = ["Home", "About Me", "My Skills", "Projects", "Contact"]
+    const topics = ["Home", "About Me", "Skills", "Experience", "Projects", "Contact"]
     const [menu, setMenu] = useState("Home")
     const [toggle, setToggle] = useState(false)
     const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "dark")

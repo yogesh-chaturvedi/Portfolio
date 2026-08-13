@@ -9,11 +9,9 @@ const Projects = () => {
 
     const data = [
 
-        { id: 1, image: screenshots.shopNest, teckStack: ['MERN', 'Stripe', 'Gemini API'], title: 'AI-Powered E-Commerce', description: 'ShopNest is a responsive e-commerce site with auth, filters, pagination, Stripe, admin panel, and Gemini AI chatbot.', githubLink: 'https://github.com/yogesh-chaturvedi/ShopNest', projectLink: 'https://shop-nest-livid.vercel.app/' },
+        { id: 1, image: screenshots.shopNest, teckStack: ['MERN', 'Stripe', 'Groq API'], title: 'AI-Powered E-Commerce', description: 'Cartify is a responsive e-commerce site with auth, filters, pagination, Stripe, admin panel, and customer support AI chatbot.', githubLink: 'https://github.com/yogesh-chaturvedi/Cartify', projectLink: 'https://cartify-ten-eta.vercel.app/' },
 
-        { id: 2, image: screenshots.passwordManagerSS, teckStack: ['React', 'Node.js', 'MongoDb'], title: 'Password Manager', description: 'Developed LockVault – a MERN stack password manager with Encryption, Authentication, CRUD, and responsive UI.', githubLink: 'https://github.com/yogesh-chaturvedi/Password-Manager', projectLink: 'https://password-manager-ten-xi.vercel.app/' },
-
-        { id: 3, image: screenshots.learnifyAiSS, teckStack: ['MERN', 'Multer', 'Gemini API'], title: 'Full Stack AI-Powered LMS', description: 'Built a secure, role-based LMS with secure authentication and dashboards for Admin, Instructor, and User', githubLink: 'https://github.com/yogesh-chaturvedi/LMS', projectLink: 'https://learnifyai-phi-azure.vercel.app/' }
+        { id: 2, image: screenshots.passwordManagerSS, teckStack: ['React', 'Node.js', 'MongoDb'], title: 'Password Manager', description: 'Developed KeyVault – a MERN stack password manager with zero-knowledge architecture  Encryption, Authentication, CRUD, and responsive UI.', githubLink: 'https://github.com/yogesh-chaturvedi/KeyVault', projectLink: 'https://key-vault-swart.vercel.app/' },
 
     ]
 
@@ -30,7 +28,7 @@ const Projects = () => {
             <div className="projects flex flex-col gap-5 flex-wrap justify-center md:flex-row md:gap-20">
 
                 {data.map((items, index) => {
-                    return (<div key={index} className='ProjectCard hover:translate-y-1 transition duration-200 z-20 flex flex-col gap-6 bg-gray-200 dark:bg-black dark:text-white text-slate-900 rounded-2xl border-2 border-black  dark:border-white h-[400px] w-[300px]'>
+                    return (<div key={index} className='ProjectCard hover:translate-y-1 z-20 flex flex-col gap-6  dark:text-white text-slate-900 rounded-2xl border-2 border-black  dark:border-white h-[400px] w-[300px] bg-blue-50 hover:bg-blue-100 dark:bg-gray-900 dark:hover:bg-gray-800 transition-all duration-500 shadow-md'>
                         <img className='border-b-2 border-gray-600 dark:border-white rounded-t-2xl h-[50%] w-full' src={items.image} alt="project-img" />
 
                         {/* tachStack */}

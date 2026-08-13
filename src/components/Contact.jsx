@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 
 const Contact = () => {
@@ -123,12 +123,12 @@ const Contact = () => {
             </div>
 
             <div className='flex flex-col gap-5 md:flex-row md:justify-evenly'>
-                <div className="left border border-black dark:border-white rounded-2xl h-auto md:w-[45%] bg-gray-100 text-slate-900 dark:text-white dark:bg-gray-950 flex flex-col justify-evenly py-4">
+                <div className="left border border-black dark:border-white rounded-2xl h-auto md:w-[45%]  text-slate-900 dark:text-white flex flex-col justify-evenly py-4 bg-blue-50 hover:bg-blue-100 dark:bg-gray-900 dark:hover:bg-gray-800 transition-all duration-500 shadow-md">
                     <h3 className='font-bold text-2xl'>Contact Information</h3>
 
                     <div className='contactInfo px-3 py-6 flex flex-col items-center gap-7 '>
                         {contactData.map((items, index) => {
-                            return (<div key={index} className='border-1 w-full rounded-2xl p-1 hover:bg-gray-300 bg-gray-200 dark:bg-black flex gap-1 md:gap-3 items-center'>
+                            return (<div key={index} className='border-1 w-full rounded-2xl p-1 hover:bg-gray-300 bg-gray-200 dark:bg-gray-900 shadow-md border border-gray-200 flex gap-1 md:gap-3 items-center'>
                                 <span><i className="fa-solid fa-envelope text-2xl px-3 py-2 rounded-full bg-gray-300 dark:bg-gray-800"></i></span>
 
                                 <div className='flex flex-col items-start w-full break-words'>
@@ -153,7 +153,7 @@ const Contact = () => {
                 </div>
 
 
-                <div className="right border dark:border-white border-black rounded-2xl dark:bg-gray-950 h-[450px] md:w-[45%] flex flex-col justify-evenly bg-gray-100 text-slate-900 dark:text-white ">
+                <div className="right border dark:border-white border-black rounded-2xl h-[450px] md:w-[45%] flex flex-col justify-evenly text-slate-900 dark:text-white bg-blue-50 hover:bg-blue-100 dark:bg-gray-900 dark:hover:bg-gray-800 transition-all duration-500 shadow-md">
 
                     <h3 className='text-2xl font-bold'>Send a Message</h3>
 
@@ -162,19 +162,19 @@ const Contact = () => {
                             {/* first */}
                             <div className='flex flex-col gap-1 items-center'>
                                 <label htmlFor="Your Name" className='font-bold'>Your Name</label>
-                                <input ref={firstInput} className='border dark:border-white border-black  px-2 bg-gray-200 hove:bg-gray-300 dark:bg-black rounded-3xl w-[80%] h-[40px] outline-none placeholder-black dark:placeholder-white' type="text" name='name' placeholder='Enter Your Name' />
+                                <input ref={firstInput} className='border dark:border-white border-black  px-2 bg-gray-200 hove:bg-gray-300 dark:bg-gray-900 rounded-3xl w-[80%] h-[40px] outline-none placeholder-black dark:placeholder-white' type="text" name='name' placeholder='Enter Your Name' />
 
                             </div>
                             {/* second */}
                             <div className='flex flex-col gap-1 items-center'>
                                 <label htmlFor="Your email" className='font-bold'>Your Email</label>
-                                <input ref={secondInput} className='border dark:border-white border-black px-2 bg-gray-200 hove:bg-gray-300 dark:bg-black rounded-3xl w-[80%] h-[40px] outline-none placeholder-black dark:placeholder-white' type="text" name='email' placeholder='Enter Your Email' />
+                                <input ref={secondInput} className='border dark:border-white border-black px-2 bg-gray-200 hove:bg-gray-300 dark:bg-gray-900 rounded-3xl w-[80%] h-[40px] outline-none placeholder-black dark:placeholder-white' type="text" name='email' placeholder='Enter Your Email' />
 
                             </div>
                             {/* third */}
                             <div className='flex flex-col gap-1 items-center'>
                                 <label htmlFor="Your message" className='font-bold'>Your Message</label>
-                                <textarea ref={thirdInput} className='border dark:border-white border-black px-2 py-1 bg-gray-200 hove:bg-gray-300 dark:bg-black rounded-3xl w-[80%] outline-none placeholder-black dark:placeholder-white' rows={3} type="text" name='message' placeholder='Enter Your Message Here...' />
+                                <textarea ref={thirdInput} className='border dark:border-white border-black px-2 py-1 bg-gray-200 hove:bg-gray-300 dark:bg-gray-900 rounded-3xl w-[80%] outline-none placeholder-black dark:placeholder-white' rows={3} type="text" name='message' placeholder='Enter Your Message Here...' />
 
                             </div>
                         </div>
