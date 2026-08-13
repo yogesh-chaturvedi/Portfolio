@@ -1,15 +1,29 @@
 import React from 'react'
+import { motion } from "framer-motion";
 
 const Experience = () => {
     return (
 
-        <div id='experience' className='conatiner w-full lg:w-[80vw] mx-auto flex flex-col gap-10 text-center p-5'>
+        <div id='experience' className='container w-full lg:w-[80vw] mx-auto flex flex-col gap-10 text-center p-5'>
 
-            <div className="text-5xl font-extrabold bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 text-transparent bg-clip-text inline-block mt-5">
+            <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7 }}
+                viewport={{ once: true }}
+                className="text-5xl font-extrabold bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 text-transparent bg-clip-text inline-block mt-5"
+            >
                 Experience
-            </div>
+            </motion.div>
 
-            <div className="mt-6 p-6 rounded-2xl bg-blue-50 hover:bg-blue-100 dark:bg-gray-900 dark:hover:bg-gray-800 transition-all duration-500 shadow-md">
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5 }}
+                className="mt-6 p-6 rounded-2xl bg-blue-50 hover:bg-blue-100 dark:bg-gray-900 dark:hover:bg-gray-800 transition-all duration-500 shadow-md"
+            >
 
                 {/* Header */}
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
@@ -93,8 +107,8 @@ const Experience = () => {
                     </div>
                 </div>
 
-            </div>
-        </div>
+            </motion.div>
+        </div >
     )
 }
 
