@@ -43,7 +43,7 @@ function Hero() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7, delay: 0.6 }}
-                    className="text-3xl"
+                    className="text-xl sm:text-2xl md:text-3xl"
                 >
                     I’m a developer passionate about building clean, responsive,
                     and practical web applications. I work with React, Next.js,
