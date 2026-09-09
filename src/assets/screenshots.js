@@ -1,13 +1,9 @@
-import geminiSS from './geminiSS.png'
-import passwordManagerSS from './passwordManagerSS.png'
-import shopNest from './shopNest.png'
-import learnifyAiSS from './learnifyAiSS.png'
+import passwordManager from './passwordManager.png'
+import cartify from './cartify.png'
 
 
 
 export const screenshots = {
-    geminiSS,
-    passwordManagerSS,
-    shopNest,
-    learnifyAiSS
+    passwordManager,
+    cartify,
 }

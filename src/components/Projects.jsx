@@ -11,17 +11,17 @@ const Projects = () => {
     const data = [
         {
             id: 1,
-            image: screenshots.shopNest,
+            image: screenshots.cartify,
             teckStack: ['MERN', 'Stripe', 'Groq API'],
             title: 'AI-Powered E-Commerce',
-            description: 'Cartify is a responsive e-commerce site with auth, filters, pagination, Stripe, admin panel, and customer support AI chatbot.',
+            description: 'Cartify is a responsive e-commerce site with auth, filters, pagination, Stripe checkout, admin panel, and customer support AI chatbot.',
             githubLink: 'https://github.com/yogesh-chaturvedi/Cartify',
             projectLink: 'https://cartify-ten-eta.vercel.app/'
         },
 
         {
             id: 2,
-            image: screenshots.passwordManagerSS,
+            image: screenshots.passwordManager,
             teckStack: ['React', 'Node.js', 'MongoDb'],
             title: 'Password Manager',
             description: 'Developed KeyVault – a MERN stack password manager with zero-knowledge architecture, encryption, authentication, CRUD, and responsive UI.',
@@ -59,6 +59,15 @@ const Projects = () => {
                     Here are some of my recent projects. Each project was
                     carefully crafted with attention to detail, performance,
                     and user experience.
+                </motion.p>
+                 <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    viewport={{ once: true }}
+                    className="subTitle w-full sm:w-[90%] md:w-[80%] lg:w-[70%] text-xs md:text-sm font-semibold text-red-600"
+                >
+                   Please wait, My projets will take 1 or 2 minutes to cold start because they are hoisted on vercel.
                 </motion.p>
 
             </div>

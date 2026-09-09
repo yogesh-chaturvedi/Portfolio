@@ -99,8 +99,8 @@ const Experience = () => {
                     <div className='flex justify-center'>
                         <div className="flex flex-col items-start space-y-2 text-gray-800 dark:text-gray-200 font-medium">
                             <p>• Building and maintaining frontend features</p>
-                            <p>• Working on HMS application workflows</p>
-                            <p>• Implementing forms and validation</p>
+                            <p>• Built Multiple reusable components</p>
+                            <p>• Collaborate with Backend and QA teams</p>
                             <p>• Fixing bugs and improving UI</p>
                             <p>• Following Git/GitHub workflow and pull requests</p>
                         </div>
